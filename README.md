@@ -211,10 +211,40 @@ npm run build
 
 ## Screenshots
 
-Application screenshots illustrating the interactive hero, AI itinerary results, budget breakdown cards, and saved trips dashboard are located in:
-```text
-docs/screenshots/
-```
+### 1. Homepage & Intelligent Travel Hero
+An intuitive split-layout hero integrating conversational prompt inputs, quick example pills, and live weather/budget signals.
+![Homepage](docs/screenshots/homepage.png)
+
+### 2. User Authentication (Sign In & Sign Up)
+Secure JWT-based authentication with local account registration and instant demo user access.
+
+| Sign In | Create Account |
+| :---: | :---: |
+| ![Sign In](docs/screenshots/signin.png) | ![Sign Up](docs/screenshots/signup.png) |
+
+### 3. Plan Trip Interface
+Natural-language vacation prompt with customizable destination, duration, travelers, and budget ceiling.
+![Plan Trip](docs/screenshots/plan-trip.png)
+
+### 4. AI-Generated Travel Itinerary
+Multi-tool planning synthesis featuring destination weather risk evaluation, vetted hotel cards with bounded pricing, and itemized daily schedules.
+![AI Generated Itinerary](docs/screenshots/generated-itinerary.png)
+
+### 5. Autonomous AI Replanning
+Self-healing optimization triggered when financial constraints or preferences shift, displaying transparent savings rationale.
+![Autonomous Replanning](docs/screenshots/ai-replanning.png)
+
+### 6. Destinations Explorer & Curated Catalog
+Curated Indian destination catalog with category tag filtering (`BEACH`, `HILLS`, `TEA`, `HERITAGE`, etc.) and one-click *"Plan Here"* action.
+![Destinations Catalog](docs/screenshots/destinations.png)
+
+### 7. "My Saved Trips" Dashboard
+Personalized management dashboard tracking confirmed itineraries, aggregate budget allocations, and single-click full itinerary reload.
+![My Saved Trips Dashboard](docs/screenshots/saved-trips.png)
+
+### 8. About & Architecture Narrative
+Product-first narrative illustrating the 4-phase intelligence cycle and Clean Architecture pipeline.
+![About Page](docs/screenshots/about.png)
 
 ---
 
