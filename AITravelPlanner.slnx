@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="AITravelPlanner.API/AITravelPlanner.API.csproj" />
+  <Project Path="AITravelPlanner.Application/AITravelPlanner.Application.csproj" />
+  <Project Path="AITravelPlanner.Domain/AITravelPlanner.Domain.csproj" />
+  <Project Path="AITravelPlanner.Infrastructure/AITravelPlanner.Infrastructure.csproj" />
+  <Project Path="AITravelPlanner.Tests/AITravelPlanner.Tests.csproj" />
+</Solution>

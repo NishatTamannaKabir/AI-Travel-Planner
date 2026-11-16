@@ -1,0 +1,50 @@
+## .NET Core & Visual Studio
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.userprefs
+*.dbmdl
+*.jfm
+*.mdf
+*.ldf
+*.ndf
+
+## Environment & Secrets
+.env
+.env.*
+!.env.example
+appsettings.Production.json
+appsettings.*.local.json
+
+## Node & Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+## IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.bak
+*~
+
+## OS & Temporary Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+## App Artifacts & Logs
+SavedPlans/
+logs/
+*.log

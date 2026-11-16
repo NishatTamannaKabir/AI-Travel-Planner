@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F7FAF9;
+    color: #172033;
+    @apply antialiased font-sans selection:bg-brand-100 selection:text-brand-900;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7FAF9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* ===================================================
+   DEDICATED PROFESSIONAL PRINT / PDF STYLESHEET
+   =================================================== */
+@media print {
+  /* Page Setup: Standard A4 with professional margins */
+  @page {
+    size: A4 portrait;
+    margin: 12mm 14mm 14mm 14mm;
+  }
+
+  /* Force exact color reproduction on modern browser print engines */
+  *,
+  *::before,
+  *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Base Document Reset */
+  html,
+  body {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    color: #172033 !important;
+    font-size: 9.5pt !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  /* Hide screen navigation, actions, modals, and interactive chrome */
+  header,
+  footer,
+  nav,
+  .no-print,
+  button,
+  input,
+  textarea,
+  select,
+  [role="dialog"],
+  .fixed,
+  .sticky {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Make sure main content container flows naturally without extra space */
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  .print-page {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  /* Natural Document Flow: Remove excessive screen gaps */
+  .space-y-8 > :not([hidden]) ~ :not([hidden]),
+  .space-y-10 > :not([hidden]) ~ :not([hidden]),
+  .space-y-12 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 10pt !important;
+  }
+
+  /* Ensure Images are ALWAYS visible and properly sized */
+  img {
+    display: block !important;
+    max-width: 100% !important;
+    opacity: 1 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .destination-image-container {
+    height: 160px !important;
+    min-height: 160px !important;
+    max-height: 160px !important;
+    width: 100% !important;
+    display: block !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .destination-image-container img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    opacity: 1 !important;
+  }
+
+  /* Atomic Page-Break Controls: Prevent breaking inside cards */
+  .itinerary-day-card,
+  .hotel-card,
+  .weather-card,
+  .destination-card,
+  .budget-card,
+  .packing-card,
+  .ai-rationale-card,
+  .replan-report-card,
+  .warning-banner,
+  .trip-summary-card {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    margin-bottom: 8pt !important;
+    box-shadow: none !important;
+    border: 1px solid #D1D5DB !important;
+    border-radius: 10px !important;
+    background-color: #FFFFFF !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* Section Headings: Keep with their following section content */
+  h1, h2, h3, h4,
+  .print-heading,
+  .break-after-avoid {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  /* High-level layout containers MUST flow naturally across pages */
+  .grid,
+  .flex,
+  .itinerary-timeline {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  /* Hotel Pricing Box in Print: Guaranteed fully contained */
+  .hotel-pricing-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    background-color: #F8FAFC !important;
+    border: 1px solid #E2E8F0 !important;
+    padding: 8pt 10pt !important;
+    margin-top: 6pt !important;
+    margin-bottom: 6pt !important;
+  }
+
+  /* Clean up card paddings for compact paper presentation */
+  .hotel-card,
+  .budget-card,
+  .weather-card,
+  .destination-card,
+  .packing-card {
+    padding: 9pt 11pt !important;
+  }
+
+  /* Force borders to be crisp gray on paper */
+  .border,
+  .border-b,
+  .border-t,
+  .border-l,
+  .border-r {
+    border-color: #E2E8F0 !important;
+  }
+}
